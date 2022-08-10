@@ -1,0 +1,148 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: white;
+  width: 100%;
+}
+
+
+      /* INICIO HEADER */
+
+header{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top:0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid rgb(191, 191, 191);
+  background-color: white;
+}
+.contenido_header{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.titulo_header{
+  height: 60px;
+  position: absolute;
+  left: 0px;
+}
+.titulo_header a{
+  text-decoration: none;
+  color: black;
+}
+.titulo_header h1{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+
+.menu_header{
+  height: 60px;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.menu_header a{
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+  margin-left: 20px;
+  margin-top: 22px;
+  font-size: 13px;
+}
+.menu_header a:hover{
+
+  color: rgb(144, 144, 144);
+
+}
+
+.tienda_online {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.tienda_online a{
+  margin-top: 20px;
+  margin-left: 30px;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+      /* INICIO CUERPO */
+
+.cuerpo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+
+}
+
+.cuerpo_slider{
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+}
+
+.cuerpo_slider img{
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+}
+.media_imagen{
+  width: 58%;
+}
+.contenido_imagen{
+  width: 42%;
+  height: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contenido_texto{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.contenido_texto h2{
+  font-size: 37px;
+  font-weight: normal;
+}
+.contenido_texto h3{
+  font-size: 25px;
+  font-family: cursive;
+}
+.contenido_texto p{
+  margin-top: 10px;
+  font-size: 17px;
+  color: rgb(68, 68, 68);
+}
+.contenido_texto button{
+  background-color: transparent;
+  border: 1px solid rgb(68, 68, 68);
+  cursor: pointer;
+  margin-top: 30px;
+  color: rgb(68, 68, 68);
+  padding: 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.contenido_texto button:hover{
+  background-color: rgb(162, 162, 162);;
+}
