@@ -351,6 +351,10 @@ footer{
   display: flex;
   flex-direction: column;
 }
+.titulo_footer img{
+  width: 200px;
+  height: 100px;
+}
 .titulo_footer h1{
   color: white;
   font-size: 23px;
@@ -417,12 +421,12 @@ footer{
 }
 
 .footer_copy h1{
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   margin-right: 2px;
 }
 .footer_copy h2{
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   color: white;
   margin-right: 2px;
@@ -431,4 +435,5 @@ footer{
   font-size: 18px;
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
