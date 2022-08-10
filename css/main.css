@@ -21,6 +21,7 @@ header{
   justify-content: center;
   border: 1px solid rgb(191, 191, 191);
   background-color: white;
+  z-index: 2;
 }
 .contenido_header{
   width: 80%;
@@ -87,6 +88,8 @@ header{
 
 }
 
+/* SLIDER */
+
 .cuerpo_slider{
   width: 100%;
   position: relative;
@@ -145,4 +148,41 @@ header{
 
 .contenido_texto button:hover{
   background-color: rgb(162, 162, 162);;
+}
+
+/* PRODUCTOS */
+
+.productos{
+  width: 100%;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo_productos{
+  border-left: 2px solid black;
+}
+.titulo_productos h1{
+  margin-left: 20px;
+  font-family: cursive;
+  font-weight: 500;
+}
+
+.cuerpo_productos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: 50px;
+}
+.contenedor_producto{
+  width: 300px;
+  height: 350px;
+  border: 1px solid black;
+  margin-right: 20px;
+  margin-top: 20px;
 }
