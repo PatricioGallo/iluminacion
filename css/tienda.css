@@ -484,8 +484,8 @@ footer{
 }
 
 .componentes_imagen img{
-  width: 60px;
-  height: 83px;
+  width: 70px;
+  height: 85px;
   margin-left: 25%;
   border-radius: 10px;
 }
@@ -549,3 +549,82 @@ footer{
 
 
 /*    Fin componentes SLIDER     */
+
+
+/* PAGINA N2 */
+
+.body2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.separacion_compra{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  margin-left: 10%;
+  margin-top: 40px;
+}
+.imagen_compra{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.imagen_compra img{
+  width: 300px;
+  height: 400px;
+}
+.informacion_compra {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.informacion_compra h1{
+  font-size: 28px;
+  font-style: italic;
+}
+.informacion_compra h2{
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+}
+.informacion_compra_parrafos{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.informacion_compra_parrafos h3{
+  font-size: 17px;
+  text-align: left;
+  font-weight: normal;
+}
+.informacion_compra h4{
+  margin-top: 10px;
+}
+.informacion_compra img{
+  width: 200px;
+  height: 160px;
+}
+.informacion_compra button{
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: transparent;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.informacion_compra button:hover{
+  background-color: rgb(214, 214, 214)
+}
+.informacion_compra p{
+  font-size: 13px;
+}

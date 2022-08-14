@@ -22,7 +22,7 @@ const workList = [{
   p1:"Presentamos nuestro nuevo modelo velador Grecia",
   p2:"Como todas nuestras lámparas, el velador Grecia es fabricado con un biopolímero amigable con el medio ambiente ",
   p3:"La luz transparenta el material por lo que crea un efecto difuso dándole un toque de calidez y relax a tus ambientes.",
-  p4:"Especiales para usar en mesa de luz o escritorio. El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
+  p4:"Especiales para usar en mesa de luz o escritori.  El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
   precioTachado:""
 },
@@ -34,10 +34,10 @@ const workList = [{
   cuotas:"",
   imagen:"roma.jpeg",
   p1:"Lampara lista para su instalación",
-  p2:"Incluye: •Florón (Tapa del techo) •Cable de 75cm de largo •Prensa cables •Portalámparas",
+  p2:"Incluye florón(tapa del techo), cable de 75cm de largo, prensa cables y portalámparas",
   p3:"",
   p4:"",
-  medias:"30 x 27 cm",
+  medidas:"30 x 27 cm",
   precioTachado:""
 },
 {

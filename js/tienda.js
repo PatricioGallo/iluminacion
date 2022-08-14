@@ -136,6 +136,44 @@ function eliminarDelCarrito(index) {
 }
 
 
+function pagina2(){
+  funcionCarrito_click();
+  cuerpo.innerHTML=""
+
+  for (const lista of carrito) {
+    let productos_contenido = document.createElement("div");
+    productos_contenido.innerHTML = `
+
+          <div class="separacion_compra">
+            <div class="imagen_compra">
+              <img src="media/imagenes/${lista.imagen}" alt="">
+            </div>
+            <div class="informacion_compra">
+              <h1>${lista.nombre}</h1>
+              <h2>${lista.tipo}</h2>
+              <div class="informacion_compra_parrafos">
+                <h3>${lista.p1}</h3>
+                <h3>${lista.p2}</h3>
+                <h3>${lista.p3}</h3>
+                <h3>${lista.p4}</h3>
+                <h4>MEDIAS: ${lista.medidas}</h4>
+              </div>
+
+              <img src="media/imagenes/mercadolibre.png" alt="">
+                <a href="#" target="_blank"> <button type="button" name="button">IR A COMPRAR</button> </a>
+              <p>*La compra se realiza por medio de mercadolibre</p>
+            </div>
+          </div>
+
+    `
+    cuerpo_compra.append(productos_contenido)
+  }
+
+
+
+}
+
+
 //------------------ PROGRAMA --------------------
 
 //variables
@@ -158,7 +196,7 @@ circulo_carrito.innerHTML = `
 for (const lista of workList) {
   let productos_contenido = document.createElement("div");
   productos_contenido.innerHTML = `
-  
+
           <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
 
               <img src="media/imagenes/${lista.imagen}" alt="">
