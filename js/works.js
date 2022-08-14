@@ -22,7 +22,7 @@ const workList = [{
   p1:"Presentamos nuestro nuevo modelo velador Grecia",
   p2:"Como todas nuestras lámparas, el velador Grecia es fabricado con un biopolímero amigable con el medio ambiente ",
   p3:"La luz transparenta el material por lo que crea un efecto difuso dándole un toque de calidez y relax a tus ambientes.",
-  p4:"Especiales para usar en mesa de luz o escritori.  El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
+  p4:"Especiales para usar en mesa de luz o escritorio. El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
   precioTachado:""
 },

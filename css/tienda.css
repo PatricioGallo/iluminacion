@@ -604,9 +604,10 @@ footer{
   font-size: 17px;
   text-align: left;
   font-weight: normal;
+  margin-top: 8px;
 }
 .informacion_compra h4{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .informacion_compra img{
   width: 200px;
