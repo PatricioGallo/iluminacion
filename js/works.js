@@ -9,7 +9,8 @@ const workList = [{
   p2:"Diseñado con el espesor justo para generar una iluminación homogénea en todo el ambiente aportándole vida y estilo.",
   p3:"",
   p4:"",
-  medidas: "30x30x30 cm"
+  medidas: "30x30x30 cm",
+  precioTachado:""
 },
 {
   id:2,
@@ -22,7 +23,8 @@ const workList = [{
   p2:"Como todas nuestras lámparas, el velador Grecia es fabricado con un biopolímero amigable con el medio ambiente ",
   p3:"La luz transparenta el material por lo que crea un efecto difuso dándole un toque de calidez y relax a tus ambientes.",
   p4:"Especiales para usar en mesa de luz o escritorio. El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
-  medidas:"20 x 20 x 20 cm"
+  medidas:"20 x 20 x 20 cm",
+  precioTachado:""
 },
 {
   id:3,
@@ -35,7 +37,8 @@ const workList = [{
   p2:"Incluye: •Florón (Tapa del techo) •Cable de 75cm de largo •Prensa cables •Portalámparas",
   p3:"",
   p4:"",
-  medias:"30 x 27 cm"
+  medias:"30 x 27 cm",
+  precioTachado:""
 },
 {
   id:4,
@@ -48,7 +51,8 @@ const workList = [{
   p2:"",
   p3:"",
   p4:"",
-  medidas:"30 cm de diámetro y 20 cm de alto"
+  medidas:"30 cm de diámetro y 20 cm de alto",
+  precioTachado:""
 },
 {
   id:5,
@@ -61,7 +65,8 @@ const workList = [{
   p2:"Diseñado con el espesor justo para generar una iluminación homogénea en todo el ambiente aportándole vida y estilo.",
   p3:"",
   p4:"",
-  medidas:"30 x 30 x 30 cm"
+  medidas:"30 x 30 x 30 cm",
+  precioTachado:""
 },
 {
   id:6,
@@ -74,5 +79,6 @@ const workList = [{
   p2:"Diseñado con el espesor justo para generar una iluminación homogénea en todo el ambiente aportándole vida y estilo.",
   p3:"",
   p4:"",
-  medidas:"20 x 20 x 20 cm"
+  medidas:"20 x 20 x 20 cm",
+  precioTachado:""
 }]

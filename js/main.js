@@ -22,7 +22,7 @@ function funcionclick(id){
         <p>${item.p3}</p>
         <p>${item.p4}</p>
         <div class="botones_informacion">
-            <a href="" target="_blank"> <button type="button" name="button">IR A TIENDA</button> </a>
+            <a href="tienda.html"> <button type="button" name="button">IR A TIENDA</button> </a>
         </div>
       </div>
 
