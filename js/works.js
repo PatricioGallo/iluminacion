@@ -47,7 +47,7 @@ const workList = [{
   precio:3700,
   cuotas:"",
   imagen:"calabaza.jpeg",
-  p1:"Características: Material PLA",
+  p1:"Características: Material PLA",
   p2:"",
   p3:"",
   p4:"",
