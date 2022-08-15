@@ -42,16 +42,20 @@ function cerrarTF(){
 //PROGRAMA
 
 let cuerpo_productos = document.getElementById("cuerpo_productos")
-
+let contador=0;
 
 for(const lista of workList){
-  let productos_contenido = document.createElement("div");
-  productos_contenido.innerHTML= `
-  <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+    if(contador < 3){
+      let productos_contenido = document.createElement("div");
+      productos_contenido.innerHTML= `
+      <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
 
-      <img src="media/imagenes/${lista.imagen}" alt="">
+          <img src="media/imagenes/${lista.imagen}" alt="">
 
-  </div>
-  `
-  cuerpo_productos.append(productos_contenido)
+      </div>
+
+      `
+      cuerpo_productos.append(productos_contenido)
+      contador= contador +1;
+  }
 }

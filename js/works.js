@@ -18,7 +18,7 @@ const workList = [{
   tipo:"Lampara velador",
   precio:3000,
   cuotas:"",
-  imagen:"",
+  imagen:"calabaza.jpeg",
   p1:"Presentamos nuestro nuevo modelo velador Grecia",
   p2:"Como todas nuestras lámparas, el velador Grecia es fabricado con un biopolímero amigable con el medio ambiente ",
   p3:"La luz transparenta el material por lo que crea un efecto difuso dándole un toque de calidez y relax a tus ambientes.",
