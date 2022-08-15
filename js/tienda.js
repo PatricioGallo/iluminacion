@@ -173,19 +173,43 @@ function pagina2(){
 
 }
 
+function funcionBusqueda(e){
+  e.preventDefault();
+
+  if (buscador.buscar.value) {
+
+    const productosFiltrados = workList.filter((el) => el.nombre.toLowerCase().includes(buscador.buscar.value.toLowerCase())  || el.tipo.toLowerCase().includes(buscador.buscar.value.toLowerCase()))
+    productosFiltrados2 = productosFiltrados;
+    productoFiltrado = 1;
+    console.log(productoFiltrado);
+    console.log("ure");
+
+    cuerpo_productos.innerHTML=""
+    mostrarIndex();
+  } else {
+
+  }
+
+}
+
 
 //------------------ PROGRAMA --------------------
 
 //variables
+let productoFiltrado = 0;
+let productosFiltrados2 = []
 let numeroCarrito = 0;
 let cuerpo_productos = document.getElementById("cuerpo_productos")
 let circulo_carrito = document.getElementById("circulo_carrito")
 let carrito_click = document.getElementById("carrito_click")
+let buscador = document.getElementById("buscador")
 let carrito = []
 let noti = 0;
 let carritoOn = 0;
 let totalPrecio = 0;
 carrito_click.addEventListener("click", funcionCarrito_click);
+buscador.addEventListener("submit",funcionBusqueda);
+mostrarIndex();
 
 //En 0 el contador del carrito
 circulo_carrito.innerHTML = `
@@ -193,21 +217,51 @@ circulo_carrito.innerHTML = `
 `
 
 //muestro los productos
-for (const lista of workList) {
-  let productos_contenido = document.createElement("div");
-  productos_contenido.innerHTML = `
 
-          <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+function mostrarIndex(){
 
-              <img src="media/imagenes/${lista.imagen}" alt="">
-              <h3>${lista.nombre}</h3>
-              <div class="precios">
-                <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
-              </div>
-              <p>Cuotas sin interes y envios a todo el pais</p>
+        if(productoFiltrado == 0){
+
+            for (const lista of workList) {
+              let productos_contenido = document.createElement("div");
+              productos_contenido.innerHTML = `
+
+                      <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+
+                          <img src="media/imagenes/${lista.imagen}" alt="">
+                          <h3>${lista.nombre}</h3>
+                          <div class="precios">
+                            <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
+                          </div>
+                          <p>Cuotas sin interes y envios a todo el pais</p>
 
 
-          </div>
-  `
-  cuerpo_productos.append(productos_contenido)
+                      </div>
+              `
+              cuerpo_productos.append(productos_contenido)
+            }
+
+        }else if(productoFiltrado == 1){
+
+          for (const lista of productosFiltrados2) {
+            console.log("wachin");
+            let productos_contenido = document.createElement("div");
+            productos_contenido.innerHTML = `
+
+                    <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+
+                        <img src="media/imagenes/${lista.imagen}" alt="">
+                        <h3>${lista.nombre}</h3>
+                        <div class="precios">
+                          <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
+                        </div>
+                        <p>Cuotas sin interes y envios a todo el pais</p>
+
+
+                    </div>
+            `
+            cuerpo_productos.append(productos_contenido)
+          }
+
+        }
 }

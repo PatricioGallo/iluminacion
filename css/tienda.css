@@ -140,11 +140,10 @@ header{
   align-items: center;
 }
 .presentacion h1{
-  font-size: 80px;
-  color: rgb(119, 119, 119);
+  font-size: 60px;
 }
 .presentacion h2{
-  font-size: 22px;
+  font-size: 20px;
   color: rgb(119, 119, 119);
 }
 
@@ -206,7 +205,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 .contenedor_producto:hover{
   border: 2px solid grey;
@@ -222,7 +221,7 @@ header{
 
 .contenedor_producto h3 {
   font-size: 18px;
-  color: rgb(166, 166, 166);
+  color: rgb(124, 124, 124);
   font-weight: normal;
   margin-top: 5px;
 }
@@ -234,6 +233,7 @@ header{
 .precios h2{
   font-size: 25px;
   margin-right: 10px;
+  letter-spacing: 2px;
 }
 .precios h4{
   font-size: 23px;
@@ -244,6 +244,7 @@ header{
 .contenedor_producto p{
   font-size: 13px;
   margin-top: 5px;
+  color: rgb(124, 124, 124);
 }
 
 
@@ -594,6 +595,7 @@ footer{
   font-size: 18px;
   font-weight: normal;
   text-align: left;
+  color: rgb(124, 124, 124);
 }
 .informacion_compra_parrafos{
   margin-top: 20px;
