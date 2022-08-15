@@ -64,6 +64,7 @@ header{
   width: 200px;
   border-radius: 10px;
   border: 1px solid grey;
+  outline: NONE;
 }
 .formulario_busqueda form button{
   background-color: transparent;
@@ -715,6 +716,7 @@ footer{
     width: 250px;
     border-radius: 5px;
     border: 1px solid grey;
+    outline: NONE;
   }
   .formulario_busqueda button{
     display: none;
