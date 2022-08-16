@@ -693,7 +693,7 @@ footer{
   /* INICIO HEADER */
   header{
     width: 100%;
-    height: 230px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid rgb(198, 198, 198);
@@ -710,6 +710,9 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  }
+  .header_nombre{
+    display: none;
   }
   .formulario_busqueda{
     height: 100px;
@@ -737,7 +740,7 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 160px;
   }
 
   .presentacion h1{
