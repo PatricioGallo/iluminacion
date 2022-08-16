@@ -17,10 +17,12 @@ function funcionclick(id){
 
       <div class="contenido_informacion">
         <h1>${item.nombre}</h1>
+        <h2>${item.tipo}</h2>
         <p>${item.p1}</p>
         <p>${item.p2}</p>
         <p>${item.p3}</p>
         <p>${item.p4}</p>
+        <h3>Medidas: ${item.medidas}</h3>
         <div class="botones_informacion">
             <a href="tienda.html"> <button type="button" name="button">IR A TIENDA</button> </a>
         </div>

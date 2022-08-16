@@ -602,13 +602,18 @@ footer{
   margin-bottom: 20px;
 }
 .informacion_compra_parrafos h3{
-  font-size: 17px;
+  font-size: 18px;
   text-align: left;
   font-weight: normal;
   margin-top: 8px;
 }
 .informacion_compra h4{
   margin-top: 15px;
+  font-size: 18px;
+}
+.informacion_compra h5{
+  font-size: 22px;
+  margin-top: 50px;
 }
 .informacion_compra img{
   width: 200px;

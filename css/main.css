@@ -479,7 +479,7 @@ footer{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: rgba(52, 52, 52, 0.69) /* Green background with 30% opacity */
+  background: rgba(52, 52, 52, 0.69) /* grey background with 30% opacity */
 }
 
 .fondo_informacion{
@@ -521,15 +521,28 @@ footer{
 .contenido_informacion h1{
   font-weight: 400;
   margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.contenido_informacion h2{
+  font-weight: normal;
+  color: grey;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
   margin-bottom: 20px;
 }
-
 .contenido_informacion p{
   font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 19px;
 }
-
+.contenido_informacion h3{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
 .botones_informacion{
   width: 100%;
   margin-top: 20px;

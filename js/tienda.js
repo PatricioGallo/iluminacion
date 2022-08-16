@@ -33,6 +33,7 @@ function funcionclick(id) {
   }
   contenidoMenuSlider.innerHTML = "";
   funcionSlider();
+  console.log(carrito);
 }
 
 
@@ -139,7 +140,7 @@ function eliminarDelCarrito(index) {
 function pagina2(){
   funcionCarrito_click();
   cuerpo.innerHTML=""
-
+  cuerpo_compra.innerHTML=""
   for (const lista of carrito) {
     let productos_contenido = document.createElement("div");
     productos_contenido.innerHTML = `
@@ -157,6 +158,7 @@ function pagina2(){
                 <h3>${lista.p3}</h3>
                 <h3>${lista.p4}</h3>
                 <h4>MEDIAS: ${lista.medidas}</h4>
+                <h5>Precio: $${lista.precio}</h5>
               </div>
 
               <img src="media/imagenes/mercadolibre.png" alt="">
@@ -168,10 +170,46 @@ function pagina2(){
     `
     cuerpo_compra.append(productos_contenido)
   }
+}
 
 
+
+function paginaInformacion(id){
+  let lista = workList.find((lista) => lista.id === id);
+  cuerpo.innerHTML=""
+  cuerpo_compra.innerHTML=""
+    let productos_contenido = document.createElement("div");
+    productos_contenido.innerHTML = `
+
+          <div class="separacion_compra">
+            <div class="imagen_compra">
+              <img src="media/imagenes/${lista.imagen}" alt="">
+            </div>
+            <div class="informacion_compra">
+              <h1>${lista.nombre}</h1>
+              <h2>${lista.tipo}</h2>
+              <div class="informacion_compra_parrafos">
+                <h3>${lista.p1}</h3>
+                <h3>${lista.p2}</h3>
+                <h3>${lista.p3}</h3>
+                <h3>${lista.p4}</h3>
+                <h4>Medidas: ${lista.medidas}</h4>
+                <h5>Precio: $${lista.precio}</h5>
+              </div>
+              <br><br><br>
+                 <button type="button" name="button" onclick="funcionclick(${lista.id})">AGREGAR AL CARRITO</button>
+              <p>*La compra se realiza por medio de mercadolibre</p>
+            </div>
+          </div>
+
+    `
+    cuerpo_compra.append(productos_contenido)
 
 }
+
+
+
+
 
 function funcionBusqueda(e){
   e.preventDefault();
@@ -226,7 +264,7 @@ function mostrarIndex(){
               let productos_contenido = document.createElement("div");
               productos_contenido.innerHTML = `
 
-                      <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+                      <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
 
                           <img src="media/imagenes/${lista.imagen}" alt="">
                           <h3>${lista.nombre}</h3>
@@ -248,7 +286,7 @@ function mostrarIndex(){
             let productos_contenido = document.createElement("div");
             productos_contenido.innerHTML = `
 
-                    <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+                    <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
 
                         <img src="media/imagenes/${lista.imagen}" alt="">
                         <h3>${lista.nombre}</h3>
