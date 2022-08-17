@@ -11,7 +11,9 @@ const workList = [{
   p4:"Consultar por colores disponibles.",
   medidas: "30x30x30 cm",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:0,
+  hot:0,
 },
 {
   id:2,
@@ -26,7 +28,9 @@ const workList = [{
   p4:"Especiales para usar en mesa de luz o escritorio. El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:1,
+  hot:0,
 },
 {
   id:3,
@@ -41,7 +45,9 @@ const workList = [{
   p4:"Consultar por colores disponibles.",
   medidas:"30 x 27 cm",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:0,
+  hot:0,
 },
 {
   id:4,
@@ -56,7 +62,9 @@ const workList = [{
   p4:"Consultar por colores disponibles.",
   medidas:"30 cm de diámetro y 20 cm de alto",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:0,
+  hot:0,
 },
 {
   id:5,
@@ -71,7 +79,9 @@ const workList = [{
   p4:"Consultar por colores disponibles.",
   medidas:"30 x 30 x 30 cm",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:0,
+  hot:0,
 },
 {
   id:6,
@@ -86,5 +96,7 @@ const workList = [{
   p4:"Especiales para usar en mesa de luz o escritorio. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
   precioTachado:"",
-  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom",
+  nuevo:0,
+  hot:0,
 }]

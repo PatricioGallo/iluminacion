@@ -1,11 +1,9 @@
-
-
 // FUNCIONES
 
-function funcionclick(id){
+function funcionclick(id) {
   let item = workList.find((lista) => lista.id === id);
 
-  informacion_works.innerHTML=`
+  informacion_works.innerHTML = `
   <div class="cuerpo_informacion">
     <div class="fondo_informacion">
 
@@ -34,8 +32,8 @@ function funcionclick(id){
 }
 
 
-function cerrarTF(){
-  informacion_works.innerHTML=""
+function cerrarTF() {
+  informacion_works.innerHTML = ""
 }
 
 
@@ -44,20 +42,31 @@ function cerrarTF(){
 //PROGRAMA
 
 let cuerpo_productos = document.getElementById("cuerpo_productos")
-let contador=0;
+let contador = 0;
 
-for(const lista of workList){
-    if(contador < 3){
-      let productos_contenido = document.createElement("div");
-      productos_contenido.innerHTML= `
+for (const lista of workList) {
+  if (contador < 3) {
+    let productos_contenido = document.createElement("div");
+    if (lista.nuevo == 1) {
+      productos_contenido.innerHTML = `
       <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
-
+          <div class="senalNuevo"> <h1> NUEVO </h1> </div>
           <img src="media/imagenes/${lista.imagen}" alt="">
 
       </div>
 
       `
-      cuerpo_productos.append(productos_contenido)
-      contador= contador +1;
+    } else if (lista.hot == 1) {
+
+    } else if (lista.nuevo == 0 || lista.hot == 0) {
+      productos_contenido.innerHTML = `
+        <div class="contenedor_producto" onclick="funcionclick(${lista.id})">
+            <img src="media/imagenes/${lista.imagen}" alt="">
+        </div>
+
+        `
+    }
+    cuerpo_productos.append(productos_contenido)
+    contador = contador + 1;
   }
 }
