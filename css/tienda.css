@@ -71,6 +71,7 @@ header{
   border: none;
   color: grey;
   cursor: pointer;
+  color:black;
 }
 .formulario_busqueda form button:hover{
   color: black;
@@ -192,6 +193,7 @@ header{
 
 .cuerpo_productos button h3{
   font-size: 20px;
+      color:black;
 }
 
 .contenedor_producto{
@@ -314,9 +316,11 @@ footer{
   border-radius: 20px;
   letter-spacing: 1px;
   margin-top: 10px;
+      color:black;
 }
 .tienda_footer button:hover{
   background-color: rgb(103, 103, 103)
+      color:black;
 }
 
 .redesSociales_footer{
@@ -419,9 +423,11 @@ footer{
   background-color: transparent;
   border: 1px solid grey;
   cursor: pointer;
+      color:black;
 }
 .alerta_compra button:hover{
   background-color: rgb(214, 214, 214)
+      color:black;
 }
 
 .alerta_compra .cuerpo_lineaMenu {
@@ -522,6 +528,7 @@ footer{
   cursor: pointer;
   margin-left: 35%;
   border: none;
+      color:black;
 }
 
 
@@ -628,9 +635,11 @@ footer{
   background-color: transparent;
   margin-bottom: 10px;
   cursor: pointer;
+      color:black;
 }
 .informacion_compra button:hover{
   background-color: rgb(214, 214, 214)
+
 }
 .informacion_compra p{
   font-size: 13px;
@@ -645,6 +654,7 @@ footer{
 }
 .botones_compra button{
   margin-left: 10px;
+      color:black;
 }
 
 .selector_compra{
@@ -668,6 +678,7 @@ footer{
   height: 50px;
   font-size: 20px;
   font-weight: normal;
+      color:black;
 }
 .selector_compra button:hover{
   background-color: white;
@@ -769,6 +780,7 @@ footer{
   }
   .formulario_busqueda button{
     display: none;
+    color:black;
   }
   .logo_Empresa{
     margin-top: 10px;
@@ -905,6 +917,7 @@ footer{
 }
 .botones_compra button{
   margin-left: 0px;
+  color:black;
 }
 
 .selector_compra{
@@ -924,6 +937,7 @@ footer{
   margin: 0px;
   width: 33px;
   height: 50px;
+  color:black;
 }
 .selector_compra p{
   width: 33px;
