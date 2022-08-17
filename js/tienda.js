@@ -1,6 +1,6 @@
 //------------------ FUNCIONES ---------------------
 
-function funcionclick(id) {
+function funcionclick(id,cantidad) {
 
   let item = workList.find((lista) => lista.id === id);
   carrito.push(item); //creo el carrito con la seleccion
@@ -178,6 +178,7 @@ function paginaInformacion(id){
   let lista = workList.find((lista) => lista.id === id);
   cuerpo.innerHTML=""
   cuerpo_compra.innerHTML=""
+  cantidadProductos=1;
     let productos_contenido = document.createElement("div");
     productos_contenido.innerHTML = `
 
@@ -195,9 +196,16 @@ function paginaInformacion(id){
                 <h3>${lista.p4}</h3>
                 <h4>Medidas: ${lista.medidas}</h4>
                 <h5>Precio: $${lista.precio}</h5>
+                <div class="selector_compra">
+                  <button type="button" name="button" id="resta">-</button>
+                  <p id="mostrar_cantidad">${cantidadProductos}<p>
+                  <button type="button" name="button" id="suma">+</button>
+                </div>
               </div>
-              <br><br><br>
-                 <button type="button" name="button" onclick="funcionclick(${lista.id})">AGREGAR AL CARRITO</button>
+              <div class="botones_compra">
+                <button type="button" name="button" onclick="funcionclick(${lista.id},${cantidadProductos})">AGREGAR AL CARRITO</button>
+                <a href="#" target="_blank"> <button type="button" name="button">COMPRAR AHORA</button></a>
+              </div>
               <p>*La compra se realiza por medio de mercadolibre</p>
             </div>
           </div>
@@ -205,9 +213,23 @@ function paginaInformacion(id){
     `
     cuerpo_compra.append(productos_contenido)
 
+    let resta= document.getElementById("resta")
+    let suma= document.getElementById("suma")
+    resta.addEventListener("click",()=>{
+      if(cantidadProductos>1){
+        cantidadProductos=cantidadProductos-1;
+        mostrar_cantidad.innerHTML=cantidadProductos
+      }
+    })
+
+    suma.addEventListener("click",()=>{
+        cantidadProductos=cantidadProductos+1;
+        mostrar_cantidad.innerHTML=cantidadProductos
+    })
+
+    console.log(cantidadProductos);
+
 }
-
-
 
 
 
@@ -234,6 +256,7 @@ function funcionBusqueda(e){
 //------------------ PROGRAMA --------------------
 
 //variables
+let cantidadProductos = 0;
 let productoFiltrado = 0;
 let productosFiltrados2 = []
 let numeroCarrito = 0;
