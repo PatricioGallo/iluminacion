@@ -316,7 +316,6 @@ footer{
   border-radius: 20px;
   letter-spacing: 1px;
   margin-top: 10px;
-      color:black;
 }
 .tienda_footer button:hover{
   background-color: rgb(103, 103, 103)
@@ -423,7 +422,7 @@ footer{
   background-color: transparent;
   border: 1px solid grey;
   cursor: pointer;
-      color:black;
+  color:black;
 }
 .alerta_compra button:hover{
   background-color: rgb(214, 214, 214)
@@ -528,7 +527,7 @@ footer{
   cursor: pointer;
   margin-left: 35%;
   border: none;
-      color:black;
+  color: white;
 }
 
 
