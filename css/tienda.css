@@ -541,6 +541,7 @@ footer{
   background-color: transparent;
   border-radius: 10px;
   cursor: pointer;
+  color: black;
 }
 #boton_compra:hover{
   background-color: rgb(214, 214, 214)
