@@ -1,40 +1,63 @@
 //------------------ FUNCIONES ---------------------
 
-function funcionclick(id,cantidad) {
+function funcionclick(id, cantidad) {
 
-  let item = workList.find((lista) => lista.id === id);
-  carrito.push(item); //creo el carrito con la seleccion
-  numeroCarrito = numeroCarrito + 1;
-  circulo_carrito.innerHTML = `
-    <p>${numeroCarrito}</p>
-  `
+  for (let i = 0; i < cantidadProductos; i++) {
+    let item = workList.find((lista) => lista.id === id);
+    carrito.push(item); //creo el carrito con la seleccion
+    localStorage.setItem("carritoJSON", JSON.stringify(carrito)); //agrego el carrito en formato Json al local storage
+    circulo_carrito.innerHTML = `
+          <p>${carrito.length}</p>
+        `
 
-  div6 = document.createElement("div");
-  div6.innerHTML = `
+  if(cantidadProductos >1 && i==0){
+      div6 = document.createElement("div");
+      div6.innerHTML = `
 
-      <div class="alerta_compra">
-        <h1>Producto enviado al carrito</h1>
-        <div class="cuerpo_lineaMenu"></div>
-        <h3>${item.nombre}</h3>
-        <h4>$${item.precio}</h4>
-        <button type="button" onclick="cerrar()">CERRAR</button>
-      </div>
+              <div class="alerta_compra">
+                <h1>Productos enviados al carrito</h1>
+                <div class="cuerpo_lineaMenu"></div>
+                <h3>${item.nombre}</h3>
+                <h4>$${item.precio}</h4>
+                <button type="button" onclick="cerrar()">CERRAR</button>
+              </div>
 
-  `
-  div6.classList = "animacion-entrada"
-  espacio_alerta.append(div6);
+          `
+      }else if(cantidadProductos==1){
+        div6 = document.createElement("div");
+        div6.innerHTML = `
 
-  if (noti == 0) {
-    timeOutID = setTimeout(cerrar, 3000);
-    noti = noti + 1;
-  } else if (noti > 0) {
-    clearTimeout(timeOutID);
-    timeOutID = setTimeout(cerrar, 3000);
+                <div class="alerta_compra">
+                  <h1>Producto enviado al carrito</h1>
+                  <div class="cuerpo_lineaMenu"></div>
+                  <h3>${item.nombre}</h3>
+                  <h4>$${item.precio}</h4>
+                  <button type="button" onclick="cerrar()">CERRAR</button>
+                </div>
+
+            `
+      }
+      
+    div6.classList = "animacion-entrada"
+    espacio_alerta.append(div6);
+
+    if (noti == 0) {
+      timeOutID = setTimeout(cerrar, 3000);
+      noti = noti + 1;
+    } else if (noti > 0) {
+      clearTimeout(timeOutID);
+      timeOutID = setTimeout(cerrar, 3000);
+    }
+    contenidoMenuSlider.innerHTML = "";
+    funcionSlider();
   }
-  contenidoMenuSlider.innerHTML = "";
-  funcionSlider();
-  console.log(carrito);
+
+
 }
+
+
+
+
 
 
 function cerrar() {
@@ -43,6 +66,9 @@ function cerrar() {
   espacio_alerta.innerHTML = "";
   noti = 0;
 }
+
+
+
 
 
 
@@ -56,13 +82,13 @@ function funcionCarrito_click() {
     carritoOn = 0;
   }
 
-  if (numeroCarrito != 0) {
+  if (carritoEnLs.length != 0) {
     debajo_menuSlider.innerHTML = `
           <div class="cuerpo_lineaMenu"></div>
           <h1>Total: $${totalPrecio}</h1>
           <button id="boton_compra" type="button" name="button" onclick="pagina2()">COMPRAR</button>
       `
-  } else if (numeroCarrito == 0) {
+  } else if (carritoEnLs.length == 0) {
     debajo_menuSlider.innerHTML = `
           <div class="cuerpo_lineaMenu"></div>
           <br><br>
@@ -72,7 +98,12 @@ function funcionCarrito_click() {
 
         `
   }
+
 }
+
+
+
+
 
 
 function funcionSlider() {
@@ -100,13 +131,13 @@ function funcionSlider() {
     contenidoMenuSlider.className = "overflow"
   }
 
-  if (numeroCarrito != 0) {
+  if (carritoEnLs.length != 0) {
     debajo_menuSlider.innerHTML = `
         <div class="cuerpo_lineaMenu"></div>
         <h1>Total: $${totalPrecio}</h1>
         <button id="boton_compra" type="button" name="button" onclick="pagina2()">COMPRAR</button>
 `
-  } else if (numeroCarrito == 0) {
+  } else if (carritoEnLs.length == 0) {
     debajo_menuSlider.innerHTML = `
         <div class="cuerpo_lineaMenu"></div>
         <br><br>
@@ -116,31 +147,39 @@ function funcionSlider() {
 
 `
   }
-
   menu_slider.prepend(contenidoMenuSlider)
   menu_slider.append(debajo_menuSlider);
 }
 
 
 
+
+
+
+
 function eliminarDelCarrito(index) {
   if (index != -1) {
     carrito.splice(index, 1)
+    localStorage.setItem("carritoJSON", JSON.stringify(carrito)); //agrego el carrito en formato Json al local storage
   }
   totalPrecio = 0;
   contenidoMenuSlider.innerHTML = "";
-  numeroCarrito = numeroCarrito - 1;
   circulo_carrito.innerHTML = `
-    <p>${numeroCarrito}</p>
+    <p>${carrito.length}</p>
   `
+
   funcionSlider();
 }
 
 
-function pagina2(){
+
+
+
+
+function pagina2() {
   funcionCarrito_click();
-  cuerpo.innerHTML=""
-  cuerpo_compra.innerHTML=""
+  cuerpo.innerHTML = ""
+  cuerpo_compra.innerHTML = ""
   for (const lista of carrito) {
     let productos_contenido = document.createElement("div");
     productos_contenido.innerHTML = `
@@ -162,7 +201,7 @@ function pagina2(){
               </div>
 
               <img src="media/imagenes/mercadolibre.png" alt="">
-                <a href="#" target="_blank"> <button type="button" name="button">IR A COMPRAR</button> </a>
+                <a href="${lista.linkDesacarga}" target="_blank"> <button type="button" name="button">IR A COMPRAR</button> </a>
               <p>*La compra se realiza por medio de mercadolibre</p>
             </div>
           </div>
@@ -174,13 +213,17 @@ function pagina2(){
 
 
 
-function paginaInformacion(id){
+
+
+
+
+function paginaInformacion(id) {
   let lista = workList.find((lista) => lista.id === id);
-  cuerpo.innerHTML=""
-  cuerpo_compra.innerHTML=""
-  cantidadProductos=1;
-    let productos_contenido = document.createElement("div");
-    productos_contenido.innerHTML = `
+  cuerpo.innerHTML = ""
+  cuerpo_compra.innerHTML = ""
+  cantidadProductos = 1;
+  let productos_contenido = document.createElement("div");
+  productos_contenido.innerHTML = `
 
           <div class="separacion_compra">
             <div class="imagen_compra">
@@ -204,47 +247,50 @@ function paginaInformacion(id){
               </div>
               <div class="botones_compra">
                 <button type="button" name="button" onclick="funcionclick(${lista.id},${cantidadProductos})">AGREGAR AL CARRITO</button>
-                <a href="#" target="_blank"> <button type="button" name="button">COMPRAR AHORA</button></a>
+                <a href="${lista.linkDesacarga}" target="_blank"> <button type="button" name="button">COMPRAR AHORA</button></a>
               </div>
               <p>*La compra se realiza por medio de mercadolibre</p>
             </div>
           </div>
 
     `
-    cuerpo_compra.append(productos_contenido)
+  cuerpo_compra.append(productos_contenido)
 
-    let resta= document.getElementById("resta")
-    let suma= document.getElementById("suma")
-    resta.addEventListener("click",()=>{
-      if(cantidadProductos>1){
-        cantidadProductos=cantidadProductos-1;
-        mostrar_cantidad.innerHTML=cantidadProductos
-      }
-    })
+  let resta = document.getElementById("resta")
+  let suma = document.getElementById("suma")
+  resta.addEventListener("click", () => {
+    if (cantidadProductos > 1) {
+      cantidadProductos = cantidadProductos - 1;
+      mostrar_cantidad.innerHTML = cantidadProductos
+    }
+  })
 
-    suma.addEventListener("click",()=>{
-        cantidadProductos=cantidadProductos+1;
-        mostrar_cantidad.innerHTML=cantidadProductos
-    })
+  suma.addEventListener("click", () => {
+    cantidadProductos = cantidadProductos + 1;
+    mostrar_cantidad.innerHTML = cantidadProductos
+  })
 
-    console.log(cantidadProductos);
+
 
 }
 
 
 
-function funcionBusqueda(e){
+
+
+
+function funcionBusqueda(e) {
   e.preventDefault();
 
   if (buscador.buscar.value) {
 
-    const productosFiltrados = workList.filter((el) => el.nombre.toLowerCase().includes(buscador.buscar.value.toLowerCase())  || el.tipo.toLowerCase().includes(buscador.buscar.value.toLowerCase()))
+    const productosFiltrados = workList.filter((el) => el.nombre.toLowerCase().includes(buscador.buscar.value.toLowerCase()) || el.tipo.toLowerCase().includes(buscador.buscar.value.toLowerCase()))
     productosFiltrados2 = productosFiltrados;
     productoFiltrado = 1;
     console.log(productoFiltrado);
     console.log("ure");
 
-    cuerpo_productos.innerHTML=""
+    cuerpo_productos.innerHTML = ""
     mostrarIndex();
   } else {
 
@@ -253,9 +299,31 @@ function funcionBusqueda(e){
 }
 
 
+
+
+
+function carritoEnJASON() {
+  if (carritoEnLs) {
+    carrito = carritoEnLs
+
+    circulo_carrito.innerHTML = `
+      <p>${carritoEnLs.length}</p>
+    `
+
+    funcionSlider();
+
+  } else {
+    carrito = []
+  }
+
+}
+
+
+
 //------------------ PROGRAMA --------------------
 
 //variables
+const carritoEnLs = JSON.parse(localStorage.getItem("carritoJSON"))
 let cantidadProductos = 0;
 let productoFiltrado = 0;
 let productosFiltrados2 = []
@@ -269,23 +337,20 @@ let noti = 0;
 let carritoOn = 0;
 let totalPrecio = 0;
 carrito_click.addEventListener("click", funcionCarrito_click);
-buscador.addEventListener("submit",funcionBusqueda);
+buscador.addEventListener("submit", funcionBusqueda);
 mostrarIndex();
+carritoEnJASON()
 
-//En 0 el contador del carrito
-circulo_carrito.innerHTML = `
-  <p>${numeroCarrito}</p>
-`
 
 //muestro los productos
 
-function mostrarIndex(){
+function mostrarIndex() {
 
-        if(productoFiltrado == 0){
+  if (productoFiltrado == 0) {
 
-            for (const lista of workList) {
-              let productos_contenido = document.createElement("div");
-              productos_contenido.innerHTML = `
+    for (const lista of workList) {
+      let productos_contenido = document.createElement("div");
+      productos_contenido.innerHTML = `
 
                       <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
 
@@ -299,15 +364,15 @@ function mostrarIndex(){
 
                       </div>
               `
-              cuerpo_productos.append(productos_contenido)
-            }
+      cuerpo_productos.append(productos_contenido)
+    }
 
-        }else if(productoFiltrado == 1){
+  } else if (productoFiltrado == 1) {
 
-          for (const lista of productosFiltrados2) {
-            console.log("wachin");
-            let productos_contenido = document.createElement("div");
-            productos_contenido.innerHTML = `
+    for (const lista of productosFiltrados2) {
+      console.log("wachin");
+      let productos_contenido = document.createElement("div");
+      productos_contenido.innerHTML = `
 
                     <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
 
@@ -321,8 +386,8 @@ function mostrarIndex(){
 
                     </div>
             `
-            cuerpo_productos.append(productos_contenido)
-          }
+      cuerpo_productos.append(productos_contenido)
+    }
 
-        }
+  }
 }

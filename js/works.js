@@ -10,7 +10,8 @@ const workList = [{
   p3:"Diseñado con el espesor justo para generar una iluminación homogénea en todo el ambiente aportándole vida y estilo.",
   p4:"Consultar por colores disponibles.",
   medidas: "30x30x30 cm",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 },
 {
   id:2,
@@ -24,7 +25,8 @@ const workList = [{
   p3:"La luz transparenta el material por lo que crea un efecto difuso dándole un toque de calidez y relax a tus ambientes.",
   p4:"Especiales para usar en mesa de luz o escritorio. El modelo de la foto es en color rosa pastel a pedido especial. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 },
 {
   id:3,
@@ -38,7 +40,8 @@ const workList = [{
   p3:"Incluye florón(tapa del techo), cable de 75cm de largo, prensa cables y portalámparas",
   p4:"Consultar por colores disponibles.",
   medidas:"30 x 27 cm",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 },
 {
   id:4,
@@ -52,7 +55,8 @@ const workList = [{
   p3:"Diseñado con el espesor justo para generar una iluminación homogénea en todo el ambiente aportándole vida y estilo.",
   p4:"Consultar por colores disponibles.",
   medidas:"30 cm de diámetro y 20 cm de alto",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 },
 {
   id:5,
@@ -66,7 +70,8 @@ const workList = [{
   p3:"Como todas nuestras lámparas, la lampara finlandia es fabricada con un biopolímero amigable con el medio ambiente ",
   p4:"Consultar por colores disponibles.",
   medidas:"30 x 30 x 30 cm",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 },
 {
   id:6,
@@ -80,5 +85,6 @@ const workList = [{
   p3:"Como todas nuestras lámparas, el velador finlandia es fabricado con un biopolímero amigable con el medio ambiente ",
   p4:"Especiales para usar en mesa de luz o escritorio. Consultar por colores disponibles.",
   medidas:"20 x 20 x 20 cm",
-  precioTachado:""
+  precioTachado:"",
+  linkDesacarga:"https://www.mercadolibre.com.ar/#from=homecom"
 }]
