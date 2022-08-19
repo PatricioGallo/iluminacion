@@ -10,7 +10,7 @@ function funcionclick(id, cantidad) {
           <p>${carrito.length}</p>
         `
 
-  if(cantidadProductos >1 && i==0){
+    if (cantidadProductos > 1 && i == 0) {
       div6 = document.createElement("div");
       div6.innerHTML = `
 
@@ -23,9 +23,9 @@ function funcionclick(id, cantidad) {
               </div>
 
           `
-      }else if(cantidadProductos==1){
-        div6 = document.createElement("div");
-        div6.innerHTML = `
+    } else if (cantidadProductos == 1) {
+      div6 = document.createElement("div");
+      div6.innerHTML = `
 
                 <div class="alerta_compra">
                   <h1>Producto enviado al carrito</h1>
@@ -36,8 +36,8 @@ function funcionclick(id, cantidad) {
                 </div>
 
             `
-      }
-      
+    }
+
     div6.classList = "animacion-entrada"
     espacio_alerta.append(div6);
 
@@ -338,13 +338,20 @@ let carritoOn = 0;
 let totalPrecio = 0;
 carrito_click.addEventListener("click", funcionCarrito_click);
 buscador.addEventListener("submit", funcionBusqueda);
+
 mostrarIndex();
-carritoEnJASON()
+carritoEnJASON();
+
+
+
 
 
 //muestro los productos
 
 function mostrarIndex() {
+
+  cuerpo_compra.innerHTML=""
+  console.log(productoFiltrado);
 
   if (productoFiltrado == 0) {
 
@@ -370,7 +377,6 @@ function mostrarIndex() {
   } else if (productoFiltrado == 1) {
 
     for (const lista of productosFiltrados2) {
-      console.log("wachin");
       let productos_contenido = document.createElement("div");
       productos_contenido.innerHTML = `
 
