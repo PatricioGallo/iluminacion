@@ -9,6 +9,23 @@ body{
 }
 
 
+/* INICIO FLOTANTE WHATSAPP */
+
+.whatsapp_flotante{
+  width: 52px;
+  height: 52px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  cursor: pointer;
+  z-index: 4;
+
+}
+.whatsapp_flotante img{
+  width: 50px;
+  height: 50px;
+}
+
       /* INICIO HEADER */
 
 header{

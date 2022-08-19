@@ -58,22 +58,26 @@ header{
   justify-content: center;
   align-items: center;
 }
-.formulario_busqueda form input{
-  padding: 5px;
-  width: 200px;
-  border-radius: 10px;
+.borderFormulario{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border: 1px solid grey;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.borderFormulario input{
+  width: 200px;
+  border: 0px;
   outline: NONE;
 }
-.formulario_busqueda form button{
-  background-color: transparent;
-  border: none;
-  color: grey;
-  cursor: pointer;
-  color:black;
-}
-.formulario_busqueda form button:hover{
-  color: black;
+
+.borderFormulario img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .logo_Empresa{
@@ -769,18 +773,17 @@ footer{
     height: 100px;
     width: 100%;
     margin-top: 10px;
+    display: flex;
+    flex-direction:
   }
   .formulario_busqueda form input{
     padding: 5px;
     width: 250px;
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 0px solid grey;
     outline: NONE;
   }
-  .formulario_busqueda button{
-    display: none;
-    color:black;
-  }
+
   .logo_Empresa{
     margin-top: 10px;
   }
