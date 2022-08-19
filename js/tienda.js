@@ -219,7 +219,7 @@ function pagina2() {
 
 function paginaInformacion(id) {
   let lista = workList.find((lista) => lista.id === id);
-  cuerpo.innerHTML = ""
+  cuerpo.classList = "ocultar"
   cuerpo_compra.innerHTML = ""
   cantidadProductos = 1;
   let productos_contenido = document.createElement("div");
@@ -351,8 +351,8 @@ carritoEnJASON();
 function mostrarIndex() {
 
   cuerpo_compra.innerHTML=""
-  console.log(productoFiltrado);
-
+  cuerpo_productos.innerHTML=""
+  cuerpo.classList="body"
   if (productoFiltrado == 0) {
 
     for (const lista of workList) {
