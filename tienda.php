@@ -44,6 +44,7 @@ if($_GET){
       </a>
     </div>
     <div class="header_contenido">
+
       <div class="formulario_busqueda">
         <form class="" action="index.html" method="post" id="buscador">
           <div class="borderFormulario">
@@ -52,6 +53,7 @@ if($_GET){
           </div>
         </form>
       </div>
+
       <div class="separacionHeader">
         <div class="logo_Empresa2">
           <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
@@ -65,6 +67,7 @@ if($_GET){
           </div>
         </div>
       </div>
+
       <div class="logo_Empresa">
         <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
       </div>
@@ -75,6 +78,7 @@ if($_GET){
             <p>1</p>
           </div>
         </div>
+        
       </div>
     </div>
   </header>
