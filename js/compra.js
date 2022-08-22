@@ -9,7 +9,9 @@ function funcionclick(id, cantidad) {
       circulo_carrito.innerHTML = `
             <p>${carrito.length}</p>
           `
-  
+          circulo_carrito2.innerHTML = `
+          <p>${carrito.length}</p>
+        `    
       if (cantidadProductos > 1 && i == 0) {
         div6 = document.createElement("div");
         div6.innerHTML = `
@@ -167,7 +169,9 @@ function funcionclick(id, cantidad) {
     circulo_carrito.innerHTML = `
       <p>${carrito.length}</p>
     `
-  
+    circulo_carrito2.innerHTML = `
+    <p>${carritoEnLs.length}</p>
+  `
     funcionSlider();
   }
   
@@ -243,7 +247,9 @@ function funcionclick(id, cantidad) {
       circulo_carrito.innerHTML = `
         <p>${carritoEnLs.length}</p>
       `
-  
+      circulo_carrito2.innerHTML = `
+      <p>${carritoEnLs.length}</p>
+    `
       funcionSlider();
   
     } else {
@@ -326,6 +332,7 @@ function mostrarIndex() {
   let carritoOn = 0;
   let totalPrecio = 0;
   carrito_click.addEventListener("click", funcionCarrito_click);
+  carrito_click2.addEventListener("click", funcionCarrito_click);
   buscador.addEventListener("submit", funcionBusqueda);
   
      

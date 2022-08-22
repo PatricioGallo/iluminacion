@@ -65,7 +65,7 @@ if($_GET){
         <div class="carrito2">
           <div class="carrito_click" id="carrito_click2">
             <img src="media/imagenes/carrito.png" alt="">
-            <div class="circulo_carrito" id="circulo_carrito">
+            <div class="circulo_carrito" id="circulo_carrito2">
               <p>1</p>
             </div>
           </div>

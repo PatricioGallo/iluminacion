@@ -6,9 +6,12 @@ function funcionclick(id, cantidad) {
     let item = workList.find((lista) => lista.id === id);
     carrito.push(item); //creo el carrito con la seleccion
     localStorage.setItem("carritoJSON", JSON.stringify(carrito)); //agrego el carrito en formato Json al local storage
-    circulo_carrito.innerHTML = `
+        circulo_carrito.innerHTML = `
+              <p>${carrito.length}</p>
+            `  
+        circulo_carrito2.innerHTML = `
           <p>${carrito.length}</p>
-        `
+        `    
 
     if (cantidadProductos > 1 && i == 0) {
       div6 = document.createElement("div");
@@ -75,7 +78,7 @@ function cerrar() {
 function funcionCarrito_click() {
 
   if (carritoOn == 0) {
-    menu_slider.className = "entrada menu_slider";
+    menu_slider.className = "menu_slider";
     carritoOn = 1;
   } else if (carritoOn == 1) {
     menu_slider.className = "ocultar";
@@ -167,6 +170,9 @@ function eliminarDelCarrito(index) {
   circulo_carrito.innerHTML = `
     <p>${carrito.length}</p>
   `
+  circulo_carrito2.innerHTML = `
+  <p>${carritoEnLs.length}</p>
+`
 
   funcionSlider();
 }
@@ -241,6 +247,9 @@ function carritoEnJASON() {
     circulo_carrito.innerHTML = `
       <p>${carritoEnLs.length}</p>
     `
+    circulo_carrito2.innerHTML = `
+    <p>${carritoEnLs.length}</p>
+  `
 
     funcionSlider();
 
@@ -271,9 +280,9 @@ let totalPrecio = 0;
 carrito_click.addEventListener("click", funcionCarrito_click);
 carrito_click2.addEventListener("click", funcionCarrito_click);
 buscador.addEventListener("submit", funcionBusqueda);
-
-mostrarIndex();
 carritoEnJASON();
+mostrarIndex();
+
 
 
 
