@@ -1,3 +1,20 @@
+<?php
+
+$id_producto;
+$nombre_producto;
+if($_GET){
+
+    if($_GET["id"]){
+        $id_producto = $_GET["id"];
+        $nombre_producto = $_GET["nombre_producto"];
+    }
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +23,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tienda | Light Design</title>
+  <title><?php echo $nombre_producto; ?> | Tienda | Light Design</title>
   <link rel="stylesheet" href="css/tienda.css">
   <link rel="shortcut icon" href="media/imagenes/logoNegro.jpeg">
-  <meta name="description" content="
-  Tienda de LightDesign, aqui encontraras todos nuestros productos en stock, para realizar tu compra o pedir un producto personalizado.
-  ">
+  <meta name="description" content="Compra de articulos">
   <script src="js/works.js"></script>
 </head>
 
@@ -46,7 +61,7 @@
         </form>
       </div>
       <div class="logo_Empresa">
-        <a href="tienda.html"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
+        <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
       </div>
       <div class="carrito">
         <div class="carrito_click" id="carrito_click">
@@ -59,28 +74,30 @@
     </div>
   </header>
 
+<script>
+    let id = <?php echo $id_producto; ?>;
+</script>
 
 
+ 
+<div class="body" id="cuerpo">
 
-  <div class="body" id="cuerpo">
-
-    <div class="presentacion">
-      <h1>TIENDA</h1>
-      <h2>Light Design | Hacemos envios a todo el pais por Mercado Envios</h2>
-      <div class="imagenes_envio">
-        <img src="media/imagenes/mercadopago.webp" alt="">
-        <img src="media/imagenes/mercadolibre.png" alt="">
-        <img src="media/imagenes/mercadoenvios.png" alt="">
-      </div>
-    </div>
-    <div class="productos_body">
-      <div class="cuerpo_productos" id="cuerpo_productos">
-      </div>
-    </div>
-
+<div class="presentacion">
+  <h1>TIENDA</h1>
+  <h2>Light Design | Hacemos envios a todo el pais por Mercado Envios</h2>
+  <div class="imagenes_envio">
+    <img src="media/imagenes/mercadopago.webp" alt="">
+    <img src="media/imagenes/mercadolibre.png" alt="">
+    <img src="media/imagenes/mercadoenvios.png" alt="">
   </div>
+</div>
 
+<div class="productos_body">
+  <div class="cuerpo_productos" id="cuerpo_productos">
+  </div>
+</div>
 
+</div>
 
   <div class="body2" id="cuerpo_compra">
   </div>
@@ -93,11 +110,11 @@
     <div class="footer_tienda">
       <div class="footer_contenedorTienda">
         <div class="titulo_footer">
-          <a href="tienda.html"> <img src="media/imagenes/logoNegro.jpeg" alt=""> </a>
+          <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""> </a>
         </div>
         <div class="tienda_footer">
           <h3>Contacto y tienda online</h3>
-          <a href="tienda.html"> <button type="button" name="button">TIENDA ONLINE</button> </a>
+          <a href="tienda.php"> <button type="button" name="button">TIENDA ONLINE</button> </a>
         </div>
         <div class="redesSociales_footer">
           <h3>Redes Sociales</h3>
@@ -112,14 +129,12 @@
     <div class="footer_copy">
       <h1>LIGHT DESIGN © 2022</h1>
       <h2>- Designed by:</h2>
-      <a href="http://patriciogallo.com.ar/" target="_blank">Patricio Gallo</a>
+      <a href="http://patriciogallo.com.ar/?location=ld" target="_blank">Patricio Gallo</a>
     </div>
 
   </footer>
 
-
-
-  <script src="js/tienda.js"></script>
+  <script src="js/mostrar.js"></script>
 
 </body>
 

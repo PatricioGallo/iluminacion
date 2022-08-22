@@ -86,7 +86,7 @@ function funcionCarrito_click() {
     debajo_menuSlider.innerHTML = `
           <div class="cuerpo_lineaMenu"></div>
           <h1>Total: $${totalPrecio}</h1>
-          <button id="boton_compra" type="button" name="button" onclick="pagina2()">COMPRAR</button>
+          <a href="compra.php"><button id="boton_compra" type="button" name="button">COMPRAR</button></a>
       `
   } else if (carritoEnLs.length == 0) {
     debajo_menuSlider.innerHTML = `
@@ -135,7 +135,7 @@ function funcionSlider() {
     debajo_menuSlider.innerHTML = `
         <div class="cuerpo_lineaMenu"></div>
         <h1>Total: $${totalPrecio}</h1>
-        <button id="boton_compra" type="button" name="button" onclick="pagina2()">COMPRAR</button>
+        <a href="compra.php"><button id="boton_compra" type="button" name="button">COMPRAR</button></a>
 `
   } else if (carritoEnLs.length == 0) {
     debajo_menuSlider.innerHTML = `
@@ -214,71 +214,6 @@ function pagina2() {
 
 
 
-
-
-
-function paginaInformacion(id) {
-  let lista = workList.find((lista) => lista.id === id);
-  cuerpo.classList = "ocultar"
-  cuerpo_compra.innerHTML = ""
-  cantidadProductos = 1;
-  let productos_contenido = document.createElement("div");
-  productos_contenido.innerHTML = `
-
-          <div class="separacion_compra">
-            <div class="imagen_compra">
-              <img src="media/imagenes/${lista.imagen}" alt="">
-            </div>
-            <div class="informacion_compra">
-              <h1>${lista.nombre}</h1>
-              <h2>${lista.tipo}</h2>
-              <div class="informacion_compra_parrafos">
-                <h3>${lista.p1}</h3>
-                <h3>${lista.p2}</h3>
-                <h3>${lista.p3}</h3>
-                <h3>${lista.p4}</h3>
-                <h4>Medidas: ${lista.medidas}</h4>
-                <h5>Precio: $${lista.precio}</h5>
-                <div class="selector_compra">
-                  <button type="button" name="button" id="resta">-</button>
-                  <p id="mostrar_cantidad">${cantidadProductos}<p>
-                  <button type="button" name="button" id="suma">+</button>
-                </div>
-              </div>
-              <div class="botones_compra">
-                <button type="button" name="button" onclick="funcionclick(${lista.id},${cantidadProductos})">AGREGAR AL CARRITO</button>
-                <a href="${lista.linkDesacarga}" target="_blank"> <button type="button" name="button">COMPRAR AHORA</button></a>
-              </div>
-              <p>*La compra se realiza por medio de mercadolibre</p>
-            </div>
-          </div>
-
-    `
-  cuerpo_compra.append(productos_contenido)
-
-  let resta = document.getElementById("resta")
-  let suma = document.getElementById("suma")
-  resta.addEventListener("click", () => {
-    if (cantidadProductos > 1) {
-      cantidadProductos = cantidadProductos - 1;
-      mostrar_cantidad.innerHTML = cantidadProductos
-    }
-  })
-
-  suma.addEventListener("click", () => {
-    cantidadProductos = cantidadProductos + 1;
-    mostrar_cantidad.innerHTML = cantidadProductos
-  })
-
-
-
-}
-
-
-
-
-
-
 function funcionBusqueda(e) {
   e.preventDefault();
 
@@ -297,9 +232,6 @@ function funcionBusqueda(e) {
   }
 
 }
-
-
-
 
 
 function carritoEnJASON() {
@@ -359,7 +291,7 @@ function mostrarIndex() {
       let productos_contenido = document.createElement("div");
       productos_contenido.innerHTML = `
 
-                      <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
+                     <a href="mostrar.php?id=${lista.id}&nombre_producto=${lista.nombre}"> <div class="contenedor_producto" >
 
                           <img src="media/imagenes/${lista.imagen}" alt="">
                           <h3>${lista.nombre}</h3>
@@ -369,7 +301,7 @@ function mostrarIndex() {
                           <p>Cuotas sin interes y envios a todo el pais</p>
 
 
-                      </div>
+                      </div> </a>
               `
       cuerpo_productos.append(productos_contenido)
     }
@@ -380,17 +312,17 @@ function mostrarIndex() {
       let productos_contenido = document.createElement("div");
       productos_contenido.innerHTML = `
 
-                    <div class="contenedor_producto" onclick="paginaInformacion(${lista.id})">
+            <a href="mostrar.php?id=${lista.id}"> <div class="contenedor_producto" >
 
-                        <img src="media/imagenes/${lista.imagen}" alt="">
-                        <h3>${lista.nombre}</h3>
-                        <div class="precios">
-                          <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
-                        </div>
-                        <p>Cuotas sin interes y envios a todo el pais</p>
+            <img src="media/imagenes/${lista.imagen}" alt="">
+            <h3>${lista.nombre}</h3>
+            <div class="precios">
+              <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
+            </div>
+            <p>Cuotas sin interes y envios a todo el pais</p>
 
 
-                    </div>
+            </div> </a>
             `
       cuerpo_productos.append(productos_contenido)
     }

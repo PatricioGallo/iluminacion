@@ -177,7 +177,10 @@ header{
   flex-wrap: wrap;
 }
 
-
+.productos_body a{
+  text-decoration: none;
+  color:black;
+}
 
 .cuerpo_productos{
   display: flex;
