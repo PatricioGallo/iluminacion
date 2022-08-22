@@ -52,6 +52,19 @@ if($_GET){
           </div>
         </form>
       </div>
+      <div class="separacionHeader">
+        <div class="logo_Empresa2">
+          <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
+        </div>
+        <div class="carrito2">
+          <div class="carrito_click" id="carrito_click2">
+            <img src="media/imagenes/carrito.png" alt="">
+            <div class="circulo_carrito" id="circulo_carrito">
+              <p>1</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="logo_Empresa">
         <a href="tienda.php"> <img src="media/imagenes/logoNegro.jpeg" alt=""></a>
       </div>

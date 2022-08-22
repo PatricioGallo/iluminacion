@@ -125,7 +125,9 @@ header{
   align-items: center;
 }
 
-
+.separacionHeader{
+  display:none;
+}
 /* EMPIEZA EL BODY */
 
 .body{
@@ -486,7 +488,7 @@ footer{
 .slider_componentes{
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -744,14 +746,14 @@ footer{
     flex-direction: column;
   }
   .overflow{
-    max-height: 300px;
+    max-height: 400px;
     overflow: auto;
   }
 
-  /* INICIO HEADER */
+  /*    INICIO HEADER    */
   header{
     width: 100%;
-    height: 170px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid rgb(198, 198, 198);
@@ -763,7 +765,7 @@ footer{
 
   .header_contenido{
     width: 100%;
-    height: 100px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -787,18 +789,54 @@ footer{
     outline: NONE;
   }
 
+  .separacionHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .logo_Empresa2{
+    width: 40%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+  }
+  .logo_Empresa2 img{
+    width: 100px;
+    height: 55px;
+    border-radius: 20px;
+  }
+  
+  .carrito2{
+    width: 30%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .carrito2 img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1px;
+  }
+
   .logo_Empresa{
-    margin-top: 10px;
+    display: none;
   }
   .carrito{
-      margin-top: 10px;
+      display:none;
   }
 
   .body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 160px;
+    margin-top: 120px;
   }
 
   .presentacion h1{

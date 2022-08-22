@@ -269,6 +269,7 @@ let noti = 0;
 let carritoOn = 0;
 let totalPrecio = 0;
 carrito_click.addEventListener("click", funcionCarrito_click);
+carrito_click2.addEventListener("click", funcionCarrito_click);
 buscador.addEventListener("submit", funcionBusqueda);
 
 mostrarIndex();
