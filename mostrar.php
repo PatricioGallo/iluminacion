@@ -2,6 +2,7 @@
 
 $id_producto;
 $nombre_producto;
+
 if($_GET){
 
     if($_GET["id"]){
@@ -11,9 +12,7 @@ if($_GET){
 }
 
 
-?>
-
-
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +25,7 @@ if($_GET){
   <title><?php echo $nombre_producto; ?> | Tienda | Light Design</title>
   <link rel="stylesheet" href="css/tienda.css">
   <link rel="shortcut icon" href="media/imagenes/logoNegro.jpeg">
-  <meta name="description" content="Compra de articulos">
+  <meta name="description" content="Mira nuestro producto: <?php echo $nombre_producto; ?>. Light Design" /> 
   <script src="js/works.js"></script>
 </head>
 
@@ -42,8 +41,6 @@ if($_GET){
     <div id="debajo_menuSlider">
     </div>
   </div>
-
-
 
   <header>
     <div class="header_nombre">

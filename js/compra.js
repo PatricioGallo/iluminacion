@@ -201,8 +201,10 @@ function funcionclick(id, cantidad) {
                 </div>
   
                 <img src="media/imagenes/mercadolibre.png" alt="">
-                  
-                <p>*La compra se realiza por medio de mercadolibre</p><a href="${lista.linkDesacarga}" target="_blank"> <button type="button" name="button">IR A COMPRAR</button> </a>
+                
+                <a href="${lista.linkDesacarga}" target="_blank"> 
+                <button type="button" name="button">IR A COMPRAR</button> </a>
+                <p>*La compra se realiza por medio de mercadolibre</p>
               </div>
             </div>
   
@@ -252,6 +254,61 @@ function funcionclick(id, cantidad) {
   
   
   
+//muestro los productos
+
+function mostrarIndex() {
+
+  cuerpo_compra.innerHTML=""
+  cuerpo_productos.innerHTML=""
+  cuerpo.classList="body"
+
+  if (productoFiltrado == 0) {
+
+    for (const lista of workList) {
+      let productos_contenido = document.createElement("div");
+      productos_contenido.innerHTML = `
+
+                     <a href="mostrar.php?id=${lista.id}"> <div class="contenedor_producto" >
+
+                          <img src="media/imagenes/${lista.imagen}" alt="">
+                          <h3>${lista.nombre}</h3>
+                          <div class="precios">
+                            <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
+                          </div>
+                          <p>Cuotas sin interes y envios a todo el pais</p>
+
+
+                      </div> </a>
+              `
+      cuerpo_productos.append(productos_contenido)
+    }
+
+  } else if (productoFiltrado == 1) {
+
+    for (const lista of productosFiltrados2) {
+      let productos_contenido = document.createElement("div");
+      productos_contenido.innerHTML = `
+
+            <a href="mostrar.php?id=${lista.id}"> <div class="contenedor_producto" >
+
+            <img src="media/imagenes/${lista.imagen}" alt="">
+            <h3>${lista.nombre}</h3>
+            <div class="precios">
+              <h2>$${lista.precio}</h2> <h4>${lista.precioTachado}</h4>
+            </div>
+            <p>Cuotas sin interes y envios a todo el pais</p>
+
+
+            </div> </a>
+            `
+      cuerpo_productos.append(productos_contenido)
+    }
+
+  }
+}
+
+
+
   //------------------ PROGRAMA --------------------
   
   //variables

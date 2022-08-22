@@ -324,8 +324,8 @@ footer{
   margin-top: 10px;
 }
 .tienda_footer button:hover{
-  background-color: rgb(103, 103, 103)
-      color:black;
+  background-color: rgb(103, 103, 103);
+  color: black;
 }
 
 .redesSociales_footer{
@@ -431,8 +431,8 @@ footer{
   color:black;
 }
 .alerta_compra button:hover{
-  background-color: rgb(214, 214, 214)
-      color:black;
+  background-color: rgb(214, 214, 214);
+  color:black;
 }
 
 .alerta_compra .cuerpo_lineaMenu {
@@ -570,7 +570,7 @@ footer{
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 160px;
+  margin-top: 150px;
 }
 
 .separacion_compra{
@@ -777,7 +777,7 @@ footer{
     width: 100%;
     margin-top: 10px;
     display: flex;
-    flex-direction:
+
   }
   .formulario_busqueda form input{
     padding: 5px;
